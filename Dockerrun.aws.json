@@ -38,15 +38,6 @@
 			}]
 		},
 		{
-			"environment": [{
-					"name": "PYTHONUNBUFFERED",
-					"value": "1"
-				},
-				{
-					"name": "PYTHONDONTWRITEBYTECODE",
-					"value": "1"
-				}
-			],
 			"essential": true,
 			"links": [
 				"redis",
