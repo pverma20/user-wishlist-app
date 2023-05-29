@@ -25,7 +25,7 @@ spec:
         - name: postgres
           image: postgres:12-apline
           ports:
-            - containerPort: 5432
+          - containerPort: 5432
 
         volumeMounts:
           - name: postgres-storage

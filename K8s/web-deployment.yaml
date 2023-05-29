@@ -14,12 +14,13 @@ spec:
     metadata:
       labels:
         component: wishilist-app
+    
     spec:
       containers:
         - name: wishilist-app-container
           image: pverma20/user-wishlist-k8s:v1
           ports:
-            - containerPort: 80
+          - containerPort: 80
         
         env:
           - name: REDIS_HOST
@@ -39,9 +40,3 @@ spec:
               secretKeyRef:
                 name: pgpassword
                 key: PGPASSWORD
-
-
-  
-
-
-
