@@ -6,6 +6,9 @@ metadata:
 
 #pod replica count
 spec:
+  selector:
+    matchLabels:
+      component: wishilist-app
   replicas: 3
   template:
     metadata:
@@ -37,9 +40,7 @@ spec:
               key: PGPASSWORD
 
 
-  selector:
-    matchLabels:
-      component: wishilist-app
+  
 
 
 
