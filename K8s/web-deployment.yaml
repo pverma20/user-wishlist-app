@@ -8,16 +8,16 @@ metadata:
 spec:
   selector:
     matchLabels:
-      component: wishilist-app
+      component: wishlist-app
   replicas: 3
   template:
     metadata:
       labels:
-        component: wishilist-app
+        component: wishlist-app
     
     spec:
       containers:
-        - name: wishilist-app-container
+        - name: wishlist-app-container
           image: pverma20/user-wishlist-k8s:v1
           ports:
           - containerPort: 80

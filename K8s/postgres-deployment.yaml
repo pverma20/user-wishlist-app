@@ -39,7 +39,7 @@ spec:
             - name: POSTGRES_DB
               value: hello_flask_dev
             - name: POSTGRES_PASSWORD
-                valueFrom:
-                  secretKeyRef:
+              valueFrom:
+                secretKeyRef:
                   name: pgpassword
                   key: POSTGRES_PASSWORD
