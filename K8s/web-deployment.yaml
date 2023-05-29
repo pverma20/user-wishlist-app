@@ -6,9 +6,6 @@ metadata:
 
 #pod replica count
 spec:
-  selector:
-    matchLabels:
-      component: wishlist-app
   replicas: 3
   template:
     metadata:
@@ -40,3 +37,8 @@ spec:
               secretKeyRef:
                 name: pgpassword
                 key: PGPASSWORD
+
+
+  selector:
+    matchLabels:
+      component: wishlist-app
