@@ -18,21 +18,21 @@ spec:
     spec:
       volumes:
         - name: postgres-storage
-        persistentVolumeClaim:
-          claimName: database-persistent-volume-claim
+          persistentVolumeClaim:
+            claimName: database-persistent-volume-claim
 
     containers:
       - name: postgres
-      image: postgres:12-apline
-      ports:
-        -containerPort: 5432
+        image: postgres:12-apline
+        ports:
+          - containerPort: 5432
 
       volumeMounts:
         - name: postgres-storage
-        mountPath: /var/lib/postgresql/data
-        subPath: postgres
+          mountPath: /var/lib/postgresql/data
+          subPath: postgres
 
-        env:
+      env:
         - name: POSTGRES_USER
           value: hello_flask
         - name: POSTGRES_DB
@@ -42,4 +42,3 @@ spec:
             secretKeyRef:
               name: pgpassword
               key: POSTGRES_PASSWORD
-              
