@@ -11,4 +11,4 @@ spec:
 
   resources:
     requests:
-      storgage: 1Gi
+      storage: 1Gi
