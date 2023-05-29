@@ -24,7 +24,7 @@ spec:
 
       containers:
         - name: postgres
-          image: postgres:12-apline
+          image: postgres:12-alpine
           ports:
             - containerPort: 5432
 
@@ -42,4 +42,4 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: pgpassword
-                  key: POSTGRES_PASSWORD
+                  key: PGPASSWORD
