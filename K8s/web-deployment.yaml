@@ -17,27 +17,28 @@ spec:
     spec:
       containers:
         - name: wishilist-app-container
-        image: pverma20/user-wishlist-k8s:v1
-        ports:
-        - containerPort: 80
+          image: pverma20/user-wishlist-k8s:v1
+          ports:
+            - containerPort: 80
+        
         env:
           - name: REDIS_HOST
-          value: redis-service
-          -name: REDIS_PORT
-          value: '6379'
+            value: redis-service
+          - name: REDIS_PORT
+            value: '6379'
           - name: POSTGRES_HOST
-          value: postgres-service
+            value: postgres-service
           - name: POSTGRES_USER
-          value: hello_flask
+            value: hello_flask
           - name: POSTGRES_PORT
-          value: "5432"
+            value: "5432"
           - name: POSTGRES_DB
-          value: hello_flask_db
+            value: hello_flask_db
           - name: PGPASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: pgpassword
-              key: PGPASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: pgpassword
+                key: PGPASSWORD
 
 
   

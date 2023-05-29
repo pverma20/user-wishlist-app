@@ -17,9 +17,9 @@ spec:
       labels:
         component: redis
 
-  spec:
-    containers:
+    spec:
+      containers:
       - name: redis
-      image: redis:6.0.8
-      ports:
-        - containerPort: 6379
+        image: redis:6.0.8
+        ports:
+          - containerPort: 6379
