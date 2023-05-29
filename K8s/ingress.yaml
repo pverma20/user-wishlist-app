@@ -10,9 +10,9 @@ spec:
     - http:
         paths:
         - path: /
-        pathType: Prefix
-        backend:
-          service:
+          pathType: Prefix
+          backend:
+            service:
             name: web-service
             port:
               number: 80
